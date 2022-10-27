@@ -18,7 +18,7 @@ def home():
             slackUsername="Idris Adebowale",
             backend=True,
             age=31,
-            bio="Data Scientist and Associate Cloud Engineer")
+            bio="Hi, I am a pationate Data Scientist and Associate Cloud Engineer")
     return jsonify(data)
 
 
