@@ -1,21 +1,22 @@
-# Introduction App
-This is an application that accept a single (`GET`) [Endpoint](https://ml-app-idris01.koyeb.app/) that returns a simple (`JSON`) introduction payload
+# Backend Task 2 (Simple Arithmetic)
+This is an application performs  a simple arithmetic on the payload to a `POST` [Endpoint](https://ml-app-idris01.koyeb.app/) that returns a simple (`JSON`) with the result
 
 Usage:
 
-Send get request to `https://ml-app-idris01.koyeb.app/`
+Send post request to `https://ml-app-idris01.koyeb.app/` of the following form
 
 e.g 
-```curl https://ml-app-idris01.koyeb.app/
+```curl -X POST -H "Accept:application/json" \
+	-d '{"operation_type":"subtraction","x":5,\
+	"y":8}' https://ml-app-idris01.koyeb.app/
 ```
 
 Response (json):
 
 ```
 {
-	"age":31,
-	"backend":true,
-	"bio":"Hi, I am a pationate Data Scientist and Associate Cloud Engineer",
-	"slackUsername":"Idris Adebowale"
+	"slackUsername":"Idris Adebowale",
+	"result":3,
+	"operation_type":"subtraction"
 }
 ```
